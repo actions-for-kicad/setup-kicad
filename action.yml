@@ -1,0 +1,13 @@
+name: 'Setup kicad'
+description: 'Install and setup kicad.'
+inputs:
+  version:
+    description: 'The KiCad version that needs to be installed.'
+    required: false
+    default: '7.0'
+runs:
+  using: "composite"
+  steps:
+    - name: 'Install KiCad on linux.'
+      run: install_linux.sh
+      shell: bash
