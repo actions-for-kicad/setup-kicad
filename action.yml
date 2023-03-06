@@ -1,5 +1,8 @@
 name: 'Setup kicad'
 description: 'Install and setup kicad.'
+branding:
+  icon: 'download'
+  color: 'blue'
 inputs:
   version:
     description: 'The KiCad version that needs to be installed.'
