@@ -2,10 +2,10 @@
 This action installs KiCad 7.0 in a Linux container.
 
 ## Coming features
-[ ] Make the version selectable.
-[ ] Add automatic testing.
-[ ] Finish the documentation.
-[ ] Let is also work on Windows and MacOS.
+- [ ] Make the version selectable.
+- [ ] Add automatic testing.
+- [ ] Finish the documentation.
+- [ ] Let is also work on Windows and MacOS.
 
 ## Usage
 ```yaml
