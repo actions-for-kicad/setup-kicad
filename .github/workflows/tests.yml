@@ -14,7 +14,7 @@ jobs:
       - name: Setup KiCad
         uses: ./
         with:
-          node-version: ${{ matrix.kicad-version }}
-      - name: Verify node and npm
-        run: tests/verify-kicad.sh "${{ matrix.node-version }}"
+          version: ${{ matrix.kicad-version }}
+      - name: Verify kicad
+        run: tests/verify-kicad.sh "${{ matrix.kicad-version }}"
         shell: bash
