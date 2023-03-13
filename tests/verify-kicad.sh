@@ -8,7 +8,7 @@ fi
 kicad_version="$(kicad-cli --version)"
 echo "Found KiCad version '$kicad_version'"
 
-if [[ $kicad_version =~ $1.* ]]; then
+if [[ "$kicad_version" =~ "$1.*" ]]; then
   echo "Expected version found"
 else
   echo "Unexpected version"
