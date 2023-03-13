@@ -8,7 +8,7 @@ fi
 kicad_version="$(kicad-cli --version)"
 echo "Found KiCad version '$kicad_version'"
 
-if [[ "$kicad_version" =~ "$1.*" ]]; then
+if [ -z "$(echo $kicad_version | grep --fixed-strings v$1)" ]; then
   echo "Expected version found"
 else
   echo "Unexpected version"
