@@ -3,9 +3,14 @@ description: 'Install and setup kicad.'
 branding:
   icon: 'download'
   color: 'blue'
+inputs:
+  version:
+    description: 'The kicad version.'
+    required: false
+    default: '7.0'
 runs:
   using: "composite"
   steps:
     - name: 'Install KiCad on linux.'
-      run: ${{ github.action_path }}/install_linux.sh
+      run: ${{ github.action_path }}/install_linux.sh "${{ inputs.version }}"
       shell: bash
