@@ -1,20 +1,38 @@
 # setup-kicad
-This action installs KiCad 7.0 in a Linux container.
+This action installs KiCad in a linux workflow.
 
-## Coming features
-- [X] Make the version selectable.
-- [X] Add automatic testing.
-- [ ] Finish the documentation.
+> **_NOTE:_** Minimal KiCad version is 7.0.
 
-## Usage
+# Usage
+See [action.yml](action.yml)
 ```yaml
 steps:
 - uses: actions/checkout@v3
-- uses: actions-for-kicad/setup-kicad@v0.1
-- run: kicad-cli sch export pdf ./pcb/*.kicad_sch
+- uses: actions-for-kicad/setup-kicad@v1.0
+  with:
+    version: '7.0'
+- uses: actions-for-kicad/generate-kicad-files@v1.0
+  with:
+    file: './file.kicad_sch'
+    type: 'schematic_pdf'
 - name: Upload 
-    uses: actions/upload-artifact@v3
-    with:
-    name: Schematic.pdf
-    path: ./*.pdf
+  uses: actions/upload-artifact@v3
+  with:
+    name: 'file.pdf'
+    path: './file.pdf'
 ```
+
+## Inputs
+### `version`
+
+Required: `False`
+
+Default: `7.0`
+
+Description: The version of KiCad that needs to be installed in an 'x.y' format.
+
+# License
+The scripts and documentation in this project are released under the [GNU license](LICENSE).
+
+# Contributions
+Contributions are welcome! Please help me expand and maintain this repository.
