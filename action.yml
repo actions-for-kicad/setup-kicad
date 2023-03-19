@@ -3,11 +3,13 @@ description: 'Install and setup kicad.'
 branding:
   icon: 'download'
   color: 'blue'
+
 inputs:
   version:
-    description: 'The kicad version.'
+    description: 'The kicad version in the following format: "x.y". For example: "7.0"'
     required: false
     default: '7.0'
+
 runs:
   using: "composite"
   steps:
