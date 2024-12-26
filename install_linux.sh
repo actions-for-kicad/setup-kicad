@@ -14,5 +14,5 @@ fi
 
 # Install KiCad
 sudo add-apt-repository ppa:kicad/kicad-$1-releases
-sudo apt update
-sudo apt install kicad
+sudo apt-get update
+sudo apt-get install --yes kicad
