@@ -14,5 +14,5 @@ runs:
   using: "composite"
   steps:
     - name: "Install KiCad on linux."
-      run: ${{ github.action_path }}/install_linux.sh "${{ inputs.version }}"
+      run: ${{ github.action_path }}/install-kicad.sh "${{ inputs.version }}"
       shell: bash

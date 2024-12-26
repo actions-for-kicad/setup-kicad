@@ -19,7 +19,7 @@ steps:
       file: "./file.kicad_sch"
       type: "schematic_pdf"
   - name: Upload
-    uses: actions/upload-artifact@3.0
+    uses: actions/upload-artifact@v4
     with:
       name: "file.pdf"
       path: "./file.pdf"
