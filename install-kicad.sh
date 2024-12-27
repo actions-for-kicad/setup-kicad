@@ -16,3 +16,6 @@ fi
 sudo add-apt-repository ppa:kicad/kicad-$1-releases
 sudo apt-get update
 sudo apt-get install --yes kicad
+KICAD_CONFIG_DIRECTORY="~/.config/kicad/$1/"
+mkdir -p "$KICAD_CONFIG_DIRECTORY"
+cp -r /usr/share/kicad/template/. "$KICAD_CONFIG_DIRECTORY"
