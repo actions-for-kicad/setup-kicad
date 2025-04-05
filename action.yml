@@ -6,9 +6,9 @@ branding:
 
 inputs:
   version:
-    description: 'The kicad version in the following format: "x.y". For example: "8.0"'
+    description: 'The kicad version in the following format: "x.y". For example: "9.0"'
     required: false
-    default: "8.0"
+    default: "9.0"
 
 runs:
   using: "composite"

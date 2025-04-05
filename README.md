@@ -16,7 +16,7 @@ steps:
   - uses: actions/checkout@v3
   - uses: actions-for-kicad/setup-kicad@v1
     with:
-      version: "8.0"
+      version: "9.0"
   - uses: actions-for-kicad/generate-kicad-files@v1
     with:
       file: "./file.kicad_sch"
@@ -34,7 +34,7 @@ steps:
 
 Required: `False`
 
-Default: `8.0`
+Default: `9.0`
 
 Description: The version of KiCad that needs to be installed in an 'x.y' format.
 
